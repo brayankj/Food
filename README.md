@@ -2,7 +2,7 @@
 
 Project Angular on information food
 
-- Watch project 
+- Watch project https://brayankj.github.io/Food/
 
 ![B Flores](https://repository-images.githubusercontent.com/321895910/72e32600-3f98-11eb-9e19-0839438187d0)
 
