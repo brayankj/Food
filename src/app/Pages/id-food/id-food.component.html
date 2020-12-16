@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+    <app-loading *ngIf="ingredients.length == 0" ></app-loading>
+    <section class="container-fluid animate__animated animate__fadeIn">
+        <div class="row my-4" *ngIf="ingredients.length > 0">
+            <div class="col-12">
+                <div class="head">
+                    <h4 class="m-3">Recipe</h4>
+                    <button [routerLink]="['/']" >
+                        <span class="material-icons"> arrow_back_ios_new </span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 eat" *ngIf="this.calories">
+                <img [src]="this.image" [alt]="this.title">
+                <p class="eat-title">{{this.title}}</p>
+                <div class="eat-p">
+                    <p>Calories : {{this.calories.calories}}</p>
+                    <p>Carbs : {{this.calories.carbs}}</p>
+                    <p>Fat : {{this.calories.fat}}</p>
+                    <p>Protein : {{this.calories.protein}}</p>
+                </div>
+                <p class="eat-list">Bad Calories</p>
+                <ul *ngFor="let bad of this.calories.bad">
+                    <li>title: {{bad.title}}, amount: {{bad.amount}}</li>
+                </ul>
+                <p class="eat-list">Good Calories</p>
+                <ul *ngFor="let good of this.calories.good">
+                    <li>title: {{good.title}}, amount: {{good.amount}}</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <p class="Ingredient">Ingredients:</p>
+                <div class="row">
+                    <div class="col-md-4 ingredients" *ngFor="let item of ingredients">
+                        <div class="ingredients-body">
+                            <p>{{item.name}}</p>
+                            <img [src]="'https://spoonacular.com/cdn/ingredients_100x100/'+item.image" alt="item.name"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

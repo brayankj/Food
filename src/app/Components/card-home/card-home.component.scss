@@ -1,0 +1,47 @@
+.card{
+
+    border: 0px;
+    margin: 15px 0px;
+
+    &-col{
+        padding: 0px;
+        text-align: center;
+    }
+
+    &-img{
+        cursor: pointer;
+        max-width: 80%;
+        padding: 20px 0;
+    }
+
+    &-title{
+        color: var(--GREEN);
+        cursor: pointer;
+    }
+
+    &-info{
+        color: var(--GREYDARK);
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .badge{
+        color: var(--GREEN);
+    }
+
+    .btn-more{
+        background: var(--GREEN);
+        color: var(--white);
+        cursor: pointer;
+    }
+
+}
+
+
+@media (max-width: 768px) { 
+    .card{
+        &-img{
+            padding-right: 15px;
+        }
+    }
+}

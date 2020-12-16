@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="row borde">
+      <div class="col-md-6 card-col animate__animated animate__fadeIn">
+        <img (click)="getFoodId(foods.id,foods.title,foods.image)" [src]=" foods.image | notImg " class="card-img" alt="{{ foods.title }}">
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeIn">
+        <div class="card-body">
+          <h5 (click)="getFoodId(foods.id,foods.title,foods.image)" class="card-title"> {{ foods.title }} </h5>
+          <p class="card-text card-info" [innerHtml]="foods.instructions | slice:0:250">  ... <span class="badge btn-more"></span></p>
+          <span (click)="getFoodId(foods.id,foods.title,foods.image)" class="badge btn-more">More ...</span>
+          <p> <small *ngIf="foods.cuisines" > {{ foods.cuisines }} </small> </p>
+          <p> <small *ngIf="foods.wedding" > {{ foods.wedding }} </small> </p>
+          <span class="badge" *ngIf="foods.vegan" > Vegetarian </span>
+          <p class="card-text"><small class="text-muted">Last updated {{this.rand}} mins ago</small></p>
+        </div>
+      </div>
+    </div>
+</div>
+

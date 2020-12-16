@@ -1,0 +1,18 @@
+<app-loading *ngIf="more.length == 0" ></app-loading>
+
+<section class="container-fluid" *ngIf="more.length > 0">
+    <div class="row animate__animated animate__fadeIn">
+
+        <div class="col">
+            <div class="mediap-head">
+                <h4 class="m-3">More Recomended</h4>
+                <button [routerLink]="['/']" >
+                    <span class="material-icons"> arrow_back_ios_new </span>
+                </button>
+            </div>
+            <app-card-home class="animate__fadeIn" [foods]="more" *ngFor="let more of more | paginate: { itemsPerPage: 10, currentPage: p }" ></app-card-home>
+            <pagination-controls class="Paginator" (pageChange)="p = $event"></pagination-controls>
+        </div>
+
+    </div>
+</section>

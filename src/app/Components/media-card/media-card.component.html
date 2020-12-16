@@ -1,0 +1,8 @@
+<div class="media animate__animated animate__fadeIn">
+    <img (click)="getFoodId(foodVeg.id,foodVeg.title,foodVeg.image)" [src]=" foodVeg.image | notImg " class="mr-3" alt="{{ foodVeg.title }}">
+    <div class="media-body">
+    <p (click)="getFoodId(foodVeg.id,foodVeg.title,foodVeg.image)" ><small>{{ foodVeg.title }}</small></p>
+    <p (click)="getFoodId(foodVeg.id,foodVeg.title,foodVeg.image)"><small [innerHtml]="foodVeg.summary |  slice:0:80"></small></p>
+    <p (click)="getFoodId(foodVeg.id,foodVeg.title,foodVeg.image)" class="likes"><small>Likes {{ foodVeg.aggregateLikes }}</small></p>
+    </div>
+</div>

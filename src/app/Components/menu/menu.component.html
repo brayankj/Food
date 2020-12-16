@@ -1,0 +1,35 @@
+<div class="container">
+    <nav class="navbar navbar-expand-md ">
+
+        <a class="navbar-brand" [routerLink]="['/']" >Foodie</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"> 
+            <i class="fas fa-angle-down"></i>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" (click)="getSeach('Italian')" > Italian </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="getSeach('European')"> European </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="getSeach('French')"> French </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="getSeach('American')"> American </a>
+            </li>
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text"  placeholder="Search" [formControl]="search" >
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+
+      </nav>
+</div>

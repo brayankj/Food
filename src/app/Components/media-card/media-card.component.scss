@@ -1,0 +1,25 @@
+.media{
+
+    padding: 15px 0;
+    img{
+        border-radius: 50%;
+        cursor: pointer;
+        height: 62px;
+        width: 62px;
+    }
+
+    p{ 
+        cursor: pointer;
+        margin-bottom: 0 
+    }
+
+    p small{
+        color: var(--GREY);
+        padding: 10px 0;
+    }
+
+    .likes small {
+        color: var(--GREEN);
+    }
+    
+}

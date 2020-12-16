@@ -1,0 +1,31 @@
+.mediap{
+
+    &-head{
+        display: flex;
+        button{
+            background: none;
+            border: none;
+            color: var(--GREEN);
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+    }
+}
+
+h4{
+    color: var(--GREY);
+}
+
+.Paginator{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.Paginator ::ng-deep .ngx-pagination .current {
+    background: var(--GREEN);
+    border-radius: 50%;
+}

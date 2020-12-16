@@ -1,0 +1,20 @@
+<div class="container-fluid">
+
+    <app-loading *ngIf="!foods.length" ></app-loading>
+    <section class="container-fluid animate__animated animate__fadeIn">
+        <div class="row" *ngIf="foods.length > 0">
+
+            <div class="col-md-12 foodp">
+                <div class="foodp-head">
+                    <h4 class="m-3">{{this.keyword}}</h4>
+                    <button [routerLink]="['/']" >
+                        <span class="material-icons"> arrow_back_ios_new </span>
+                    </button>
+                </div>
+                <app-card-home [foods]="foods" *ngFor="let foods of foods | paginate: { itemsPerPage: 10, currentPage: p }" ></app-card-home>
+                <pagination-controls class="Paginator" (pageChange)="p = $event"></pagination-controls>
+            </div>
+
+        </div>
+    </section>
+</div>
